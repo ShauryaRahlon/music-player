@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    background-color: #459;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    padding: 10px;
+    position: relative;
+}
+
+.container .song-info {
+    background-color: #150404;
+    margin: 0 15px;
+    color: #150404;
+    box-shadow: 10px 10px 10px 1px rgba(184, 119, 198,9);
+    padding: 15px 15px 15px 150px;
+    border-radius: 20px 20px 0px 40px;
+}
+
+.container .song-info .song-name {
+    background-color: #b9b;
+    font-size: 20px;
+    padding: 10px;
+    display: flex;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0px 3px 10px rgba(0, 8, 244, 0.6) ;
+    border-radius: 20px 20px 5px 5px;    
+    color: rgb(60, 35, 2);
+}
+
+.container .song-info .artist-name {
+    color: #e9dede;
+    font-size: 17px;
+    padding: 11px;
+    font-weight: 700;
+}
+
+.container .song-info .progress-bar {
+    background-color: #505055;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.container .song-info .progress-bar .fill-bar {
+    width: 0;
+    height: 4px;
+    border-radius: 20px;
+    background-color: #1d1d1d;
+}
+
+.container .song-info .time {
+    font-size: 15px;
+    color: wheat;
+    margin: 10px 0;
+}
+
+.container .disk {
+    max-width: 120px;
+}
+
+.container .disk .active {
+    animation: rotate 20s linear 0s infinite forwards;
+}
+
+.container .disk .cover {
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    background: url("assets/omahi.jpg");
+    background-position: center;
+    border-radius: 50%;
+    border: 2px solid #1d1d1d;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 1px 1px 20px rgb(60, 35, 199);
+}
+
+.container .disk .circle {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    left: 16.34%;
+    top: 29.63%;
+    z-index: 999;
+    border-radius: 50%;
+    background: #459
+}
+
+.container .controls {
+    display: flex;
+    font-size: larger;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #b9b;
+    width: 430px;
+    height: 16vh;
+    border-radius: 40px 40px 10em 10em;
+    box-shadow: 10px 10px 10px 10px rgba(64, 70, 255, 0.6);
+}
+
+.container .controls #play {
+    color: wheat;
+    background-color: transparent;
+    padding: 10px 10px 10px 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.container .controls #play:hover {
+    background: #b126a5;
+    color: rgb(221, 171, 157);
+}
+
+.container .controls i {
+    padding: 20px 8px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.container .controls i:hover {
+    color: rgb(184, 119, 198);
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
